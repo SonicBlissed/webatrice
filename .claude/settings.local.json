@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(awk 'NR>=425 && NR<=513' \"c:/Users/mimir/projects/Webatrice/src/routes/DeckEditor.tsx\")",
+      "Bash(npx tsc *)",
+      "Bash(taskkill /F /IM node.exe)",
+      "PowerShell(Get-Process -Name node -ErrorAction SilentlyContinue)",
+      "PowerShell(Stop-Process -Force)",
+      "Bash(Select-String -NotMatch \"rooms.ts|supabase.ts\")",
+      "PowerShell(npx tsc --noEmit)"
+    ]
+  }
+}

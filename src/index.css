@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Theme palette ----------
+   Colors are stored as space-separated RGB channels so Tailwind's
+   `<alpha-value>` slot works: rgb(var(--x) / 0.5). Only the dark
+   palette exists — light mode was removed. */
+
+:root {
+  --bg-base: 20 16 31;          /* #14101F */
+  --bg-surface: 31 24 48;       /* #1F1830 */
+  --bg-elevated: 42 33 64;      /* #2A2140 */
+  --border-subtle: 58 46 90;    /* #3A2E5A */
+  --border-strong: 90 74 133;   /* #5A4A85 */
+  --accent-primary: 159 122 234;    /* #9F7AEA */
+  --accent-primary-hover: 183 148 244; /* #B794F4 */
+  --accent-secondary: 107 70 193;   /* #6B46C1 */
+  --text-primary: 245 240 246;      /* #F5F0F6 */
+  --text-secondary: 199 191 212;    /* #C7BFD4 */
+  --text-muted: 122 110 143;        /* #7A6E8F */
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: rgb(var(--bg-base));
+  color: rgb(var(--text-primary));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Brief highlight for the deck row that was just added, so the user can see
+   what changed without having to scan the whole list. */
+@keyframes card-just-added-flash {
+  0%   { background-color: rgb(var(--accent-primary) / 0.35); }
+  100% { background-color: transparent; }
+}
+.card-just-added {
+  animation: card-just-added-flash 2.5s ease-out forwards;
+}
+
+/* Purple-tinted scrollbars to match the theme */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--border-strong)) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgb(var(--border-strong));
+  border-radius: 4px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--accent-secondary));
+}
