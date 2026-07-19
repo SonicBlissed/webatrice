@@ -80,14 +80,14 @@ export const createRoomSchema = z
       .min(3, "Room name must be at least 3 characters")
       .max(60, "Room name must be at most 60 characters"),
     capacity: z
-      .number({ invalid_type_error: "Pick a seat count" })
+      .number({ error: "Pick a seat count" })
       .int()
       .min(1, "Seats must be between 1 and 8")
       .max(8, "Seats must be between 1 and 8"),
     is_public: z.boolean(),
     password: z.string().max(60, "Password must be at most 60 characters").optional().or(z.literal("")),
     max_bracket: z
-      .number({ invalid_type_error: "Pick a max bracket" })
+      .number({ error: "Pick a max bracket" })
       .int()
       .min(1, "Max bracket must be between 1 and 5")
       .max(5, "Max bracket must be between 1 and 5"),

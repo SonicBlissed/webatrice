@@ -9,7 +9,25 @@
       "PowerShell(Get-Process -Name node -ErrorAction SilentlyContinue)",
       "PowerShell(Stop-Process -Force)",
       "Bash(Select-String -NotMatch \"rooms.ts|supabase.ts\")",
-      "PowerShell(npx tsc --noEmit)"
+      "PowerShell(npx tsc --noEmit)",
+      "Bash(npm start *)",
+      "Bash(docker --version)",
+      "Bash(docker compose *)",
+      "Bash(docker info *)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\mimir\\\\projects\\\\Webatrice\\\\reference-webatrice\\\\Webatrice\\\\packages\\\\webatrice\\\\src\\\\\" -Recurse -Filter \"*.tsx\" -o Name | head -30)",
+      "PowerShell(head -40)",
+      "Bash(xargs grep -l \"joinRoom\\\\|session.joinRoom\")",
+      "Bash(xargs grep -l \"session.joinRoom\\\\|request.session\")",
+      "Bash(xargs grep -l sockatrice)",
+      "Bash(npm uninstall *)",
+      "Bash(docker exec *)",
+      "PowerShell(docker exec -i webatrice-e2e-mysql-1 mysql -uservatrice -ppassword servatrice)",
+      "Bash(docker restart *)",
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(tasklist //FI \"IMAGENAME eq node.exe\")",
+      "PowerShell(Get-Process node -ErrorAction SilentlyContinue)",
+      "Bash(Get-ChildItem -Path \"c:/Users/mimir/projects/Webatrice/reference-webatrice/Webatrice/packages/webatrice/src/features/decks/\" -Recurse)",
+      "Bash(Select-Object FullName)"
     ]
   }
 }

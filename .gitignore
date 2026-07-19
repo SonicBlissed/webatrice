@@ -10,3 +10,18 @@ dist-ssr
 .idea
 .DS_Store
 *.log
+
+# npm auth token lives in this file for GitHub Packages access.
+# Never commit it — put the registry scope in `~/.npmrc` instead if
+# you want to share config across projects.
+.npmrc
+
+# Vendored reference project — cloned separately for parity checks;
+# not part of this repo's build or lint targets.
+reference-webatrice/
+
+# Local dev overrides for the servatrice docker stack (kept outside
+# the reference tree so those files stay pristine).
+local-servatrice.ini
+local-servatrice-seed.sql
+docker-compose.local.yml
